@@ -25,7 +25,13 @@ public:
 	void push(T val)
 	{
 		assert(Array<T>::m_array != nullptr);
-
+		//assert(search(val) != -1);
+		if (search(val) != -1)
+		{
+			cout << "Error: ";
+			cout << val;
+			cout << " Already exists in Array" << endl;
+		}
 		if (Array<T>::m_numElements >= Array<T>::m_maxSize)
 		{
 			
